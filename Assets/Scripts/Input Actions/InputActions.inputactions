@@ -1,0 +1,56 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "MouseMap",
+            "id": "200cf363-3faa-421e-84ba-8ed6b72526bb",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Value",
+                    "id": "1fad0821-d1a2-4488-8551-3f75d03b4841",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "One Modifier",
+                    "id": "626d3348-dab8-4c0c-bf96-d1880f008bfb",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "c3eda6a8-ac24-4030-bb40-ba221da780ab",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "7a4685d9-13cd-42b1-a109-47e716af7cae",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
