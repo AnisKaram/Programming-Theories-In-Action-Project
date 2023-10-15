@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ObjectIdentifier : MonoBehaviour
 {
+    public static event UnityAction<int> OnScoreFetched;
     private void Awake()
     {
         InputManager.OnClickStarted += IdentifyObjectClicked;
@@ -18,6 +20,7 @@ public class ObjectIdentifier : MonoBehaviour
         {
             FruitParent fruit = hit2D.transform.GetComponent<FruitParent>();
             Debug.Log($"Fruit name {fruit.name}, score {fruit.FruitScore}");
+            OnScoreFetched?.Invoke(fruit.FruitScore);
         }
     }
 }
