@@ -19,8 +19,8 @@ public class ObjectIdentifier : MonoBehaviour
         if (hit2D.transform != null && hit2D.collider.CompareTag("Fruit"))
         {
             FruitParent fruit = hit2D.transform.GetComponent<FruitParent>();
-            Debug.Log($"Fruit name {fruit.name}, score {fruit.FruitScore}");
             OnScoreFetched?.Invoke(fruit.FruitScore);
+            Destroy(fruit.gameObject);
         }
     }
 }
