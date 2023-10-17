@@ -11,13 +11,13 @@ public class ScorePresenter : MonoBehaviour
     #region Fields
     [SerializeField] private TextMeshProUGUI _scoreText;
 
-    private WaitForSeconds _waitForPointZeroFiveSeconds;
+    private WaitForSecondsRealtime _waitForPointZeroFiveSeconds;
     #endregion
 
     #region Unity Methods
     private void Awake()
     {
-        _waitForPointZeroFiveSeconds = new WaitForSeconds(0.05f);
+        _waitForPointZeroFiveSeconds = new WaitForSecondsRealtime(0.05f);
     }
     #endregion
 

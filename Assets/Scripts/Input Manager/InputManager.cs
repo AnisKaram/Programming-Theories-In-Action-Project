@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
         CreateInputActionObject();
         EnableInputAction();
 
+        TimerModel.OnTimerReachedZero += DisableInputAction;
         _inputActions.MouseMap.Click.started += _ => Click_Started();
         _inputActions.MouseMap.Click.canceled += _ => Click_Canceled(); 
     }
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour
     {
         DisableInputAction();
 
+        TimerModel.OnTimerReachedZero -= DisableInputAction;
         _inputActions.MouseMap.Click.started -= _ => Click_Started();
         _inputActions.MouseMap.Click.canceled -= _ => Click_Canceled();
     }

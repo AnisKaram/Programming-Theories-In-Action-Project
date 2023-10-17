@@ -76,7 +76,7 @@ public class TimerModel : MonoBehaviour
 
     private void SetTimer()
     {
-        _timerInSeconds = UnityEngine.Random.Range(25, 35);
+        _timerInSeconds = UnityEngine.Random.Range(10, 15);
     }
 
     private void ResetTimer()
