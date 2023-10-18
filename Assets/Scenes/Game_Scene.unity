@@ -816,8 +816,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scorePresenter: {fileID: 841588862}
-  _currentScore: 0
-  _previousScore: 0
 --- !u!4 &841588864
 Transform:
   m_ObjectHideFlags: 0

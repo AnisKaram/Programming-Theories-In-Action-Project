@@ -10,6 +10,8 @@ public class GameEndedModel : MonoBehaviour
     #region Unity Methods
     private void Awake()
     {
+        StartTheGame();
+
         TimerModel.OnTimerReachedZero += GameEnded;
     }
 
@@ -29,6 +31,11 @@ public class GameEndedModel : MonoBehaviour
     private void StopTheGame()
     {
         Time.timeScale = 0;
+    }
+
+    private void StartTheGame()
+    {
+        Time.timeScale = 1;
     }
     #endregion
 }
