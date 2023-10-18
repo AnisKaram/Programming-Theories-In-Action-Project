@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// This class acts as the parent class for a fruit, it's used to
 /// inherit from many child fruit classes.
-/// *INHERITANCE, POLYMORPHYSM, ENCAPSULATION* are used in this script. 
+/// *INHERITANCE, POLYMORPHISM, ENCAPSULATION, and ABSTRACTION* are used in this script. 
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class FruitParent : MonoBehaviour
@@ -87,6 +87,7 @@ public class FruitParent : MonoBehaviour
     }
     #endregion
 
+    // ABSTRACTION
     #region Private Methods
     private void MoveFruitDown()
     {

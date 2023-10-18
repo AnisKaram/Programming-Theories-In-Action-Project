@@ -34,6 +34,7 @@ public class InputManager : MonoBehaviour
     }
     #endregion
 
+    // ABSTRACTION
     #region Private Methods
     private void CreateInputActionObject()
     {
