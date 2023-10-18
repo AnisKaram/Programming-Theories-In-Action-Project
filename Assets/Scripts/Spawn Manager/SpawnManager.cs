@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     #region Fields
-    [SerializeField] private List<GameObject> _listOfFruitObjects;
+    private List<GameObject> _listOfFruitObjects;
 
     private Vector3 _screenBounds;
 
@@ -23,6 +23,8 @@ public class SpawnManager : MonoBehaviour
         yEndingPosition = _screenBounds.y + 2f;
         xStartingPosition = (_screenBounds.x * -1) + 2;
         xEndingPosition = xStartingPosition * -1;
+
+        _listOfFruitObjects = new List<GameObject>();
     }
 
     private void Start()

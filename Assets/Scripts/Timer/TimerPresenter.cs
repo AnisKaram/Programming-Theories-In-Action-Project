@@ -9,6 +9,7 @@ using System;
 public class TimerPresenter : MonoBehaviour
 {
     #region Fields
+    [Header("Texts - TextMeshPro")]
     [SerializeField] private TextMeshProUGUI _timerText;
     #endregion
 

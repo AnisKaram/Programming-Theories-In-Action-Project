@@ -1,11 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameEndedModel : MonoBehaviour
 {
+    #region Fields
+    [Header("Scripts")]
     [SerializeField] private GameEndedPresenter _gameEndedPresenter;
+    #endregion
 
+    #region Unity Methods
     private void Awake()
     {
         TimerModel.OnTimerReachedZero += GameEnded;
@@ -15,7 +17,9 @@ public class GameEndedModel : MonoBehaviour
     {
         TimerModel.OnTimerReachedZero -= GameEnded;
     }
+    #endregion
 
+    #region Private Methods
     private void GameEnded()
     {
         StopTheGame();
@@ -26,4 +30,5 @@ public class GameEndedModel : MonoBehaviour
     {
         Time.timeScale = 0;
     }
+    #endregion
 }

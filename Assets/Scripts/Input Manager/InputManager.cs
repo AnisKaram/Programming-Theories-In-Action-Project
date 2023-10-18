@@ -3,11 +3,16 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
+    #region Fields
     private InputActions _inputActions;
     private Camera _mainCamera;
+    #endregion
 
+    #region Events
     public static event UnityAction<RaycastHit2D> OnClickStarted;
+    #endregion
 
+    #region Unity Methods
     private void Awake()
     {
         _mainCamera = Camera.main;
@@ -27,7 +32,9 @@ public class InputManager : MonoBehaviour
         _inputActions.MouseMap.Click.started -= _ => Click_Started();
         _inputActions.MouseMap.Click.canceled -= _ => Click_Canceled();
     }
+    #endregion
 
+    #region Private Methods
     private void CreateInputActionObject()
     {
         _inputActions = new InputActions();
@@ -53,6 +60,7 @@ public class InputManager : MonoBehaviour
 
     private void Click_Canceled()
     {
-        Debug.Log($"Click canceled");
+        //Debug.Log($"Click canceled");
     }
+    #endregion
 }

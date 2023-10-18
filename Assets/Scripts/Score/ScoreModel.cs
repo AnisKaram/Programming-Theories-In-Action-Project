@@ -7,11 +7,12 @@ using UnityEngine;
 public class ScoreModel : MonoBehaviour
 {
     #region Fields
+    [Header("Scripts")]
     [SerializeField] private ScorePresenter _scorePresenter;
 
     public int _highScore { get; private set; }
-    [SerializeField] private int _currentScore = 0;
-    [SerializeField] private int _previousScore = 0;
+    private int _currentScore = 0;
+    private int _previousScore = 0;
     #endregion
 
     #region Unity Methods

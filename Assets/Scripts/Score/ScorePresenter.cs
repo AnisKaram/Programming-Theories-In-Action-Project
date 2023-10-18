@@ -9,6 +9,7 @@ using System.Collections;
 public class ScorePresenter : MonoBehaviour
 {
     #region Fields
+    [Header("Texts - TextMeshPro")]
     [SerializeField] private TextMeshProUGUI _scoreText;
 
     private WaitForSecondsRealtime _waitForPointZeroFiveSeconds;

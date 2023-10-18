@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class TimerModel : MonoBehaviour
 {
     #region Fields
+    [Header("Scripts")]
     [SerializeField] private TimerPresenter _timerPresenter;
     
     private float _timerInSeconds;
